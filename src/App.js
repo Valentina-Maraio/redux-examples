@@ -1,28 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import Grid from './comps/Grid';
+import World from './comps/world/World';
+import Sweet from './comps/sweet/Sweet';
+import Snack from './comps/snack/Snack';
 import Search from './comps/Search';
-import World from './buttons/World';
-import Sweet from './buttons/Sweet';
-import Snack from './buttons/Snack';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="search">
         <Search />
+        </div>
       <div>
-        <World />
-      <Grid />
+      <World />
       </div>
       <div>
         <Sweet />
-        <Grid />
       </div>
       <div>
         <Snack />
-        <Grid />
       </div>
       </header>
     </div>

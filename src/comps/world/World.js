@@ -35,12 +35,18 @@ const itemData = [
   },
 ];
 
+function getRandomFromWorld() {
+  fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=4b11ffbf8e88490d89edf0d96947b844&diet=Vegetarian&sort=random&number=2219&cuisine=all', {method: 'GET'})
+  .then(res => res.json())
+  .then(data => console.log(JSON.stringify(data)))
+}
+
 const World = () => {
   return (
     <div>
       <ImageList sx={{ width: 500, height: 450 }}>
         <ImageListItem key="Subheader" cols={2}>
-          <Button component="div">WORLD</Button>
+          <Button onClick={getRandomFromWorld} component="div">WORLD</Button>
         </ImageListItem>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>

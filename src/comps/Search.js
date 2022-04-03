@@ -4,6 +4,7 @@ const Search = () => {
   return (
     <div>
       <input placeholder="Search..."></input>
+      <button>Click</button>
     </div>
   )
 }
